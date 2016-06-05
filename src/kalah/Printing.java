@@ -1,11 +1,11 @@
 package kalah;
 
 public interface Printing {
-	public int printInitial(State s);
+	public int printInitial(AbstractState s);
 
-	public void print(boolean gameOver,State state);
+	public void print(boolean gameOver,AbstractState state);
 	
-	public void noMovesLeft(State state);
+	public void noMovesLeft(AbstractState state);
 	
 	public void printHouseEmpty();
 

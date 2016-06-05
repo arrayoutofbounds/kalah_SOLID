@@ -1,23 +1,6 @@
 package kalah;
 
-public class State {
-
-	private int initialSeeds;
-	private int numberOfHouses;
-
-	private int[] houses1;
-	private int[] houses2;
-
-	private Player opposing;
-
-	private int store1;
-
-	private int store2;
-
-	private Player currentPlayer;
-
-	private Player one;
-	private Player two;
+public class State extends AbstractState{
 
 	public State(Player one, Player two,int numberOfHouses,int initialSeeds) {
 		this.initialSeeds = initialSeeds;
@@ -28,7 +11,7 @@ public class State {
 	}
 
 
-	private void initialise() {
+	protected void initialise() {
 		houses1 = new int[numberOfHouses];
 		for(int i = 0; i < houses1.length; i++) {
 			houses1[i] = initialSeeds;

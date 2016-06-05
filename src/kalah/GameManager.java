@@ -19,9 +19,9 @@ public class GameManager {
 	private int seedsRemaining;
 
 	private Player currentPlayer;
-	private State currentState;
+	private AbstractState currentState;
 
-	public GameManager(State s,Printing p) {
+	public GameManager(AbstractState s,Printing p) {
 		currentState = s;
 		print = p;
 	}

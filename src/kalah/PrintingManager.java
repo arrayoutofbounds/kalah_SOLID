@@ -13,13 +13,13 @@ public class PrintingManager implements Printing {
 		this.io = io;
 	}
 	
-	public int printInitial(State s) {
+	public int printInitial(AbstractState s) {
 		this.print(false,s);
 		int in = io.readInteger("Player P1's turn - Specify house number or 'q' to quit: ", 1, 6, -1, "q");
 		return in;
 	}
 
-	public void print(boolean gameOver,State state) {
+	public void print(boolean gameOver,AbstractState state) {
 		// so sorted by id in arguments
 		int[] one_house = state.getHousesToPrintHouses1();
 		int[] two_house = state.getHousesToPrintHouses2();
@@ -58,7 +58,7 @@ public class PrintingManager implements Printing {
 		io.println("+----+-------+-------+-------+-------+-------+-------+----+");
 	}
 	
-	public void noMovesLeft(State state) {
+	public void noMovesLeft(AbstractState state) {
 		print(true,state);
 		int score1 = 0;
 		int score2 = 0;

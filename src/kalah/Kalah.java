@@ -16,12 +16,12 @@ public class Kalah {
 		int numberOfHouses = 6;
 		int initialSeeds = 4;
 		
-		Player one = new Player();
+		Player one = new Human();
 		one.setId(1);
-		Player two = new Player();
+		Player two = new Human();
 		two.setId(2);
 		
-		State s = new State(one,two,numberOfHouses,initialSeeds);
+		AbstractState s = new State(one,two,numberOfHouses,initialSeeds);
 		
 		s.setCurrentPlayer(one);
 		s.setOpposingPlayer(two);
